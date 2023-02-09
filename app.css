@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "article"
+    "aside"
+    "footer";
+    grid-auto-rows: 20vh;
+}
+
+@media (min-width: 800px) {
+    main {
+        grid-template-areas: 
+        "header header header"
+        "nav article aside"
+        "footer footer footer";
+        grid-template-columns: 15% 70% 15%;
+        grid-template-rows: 15vh 100vh 15vh;
+    }
+}
+
+#overskrift {
+    grid-area: header;
+    background-color: red;
+    text-align: center;
+    padding-top: 25px;
+}
+
+nav {
+    grid-area: nav;
+    background-color: blue;
+}
+
+article {
+    grid-area: article;
+    background-color: yellow;
+
+}
+
+aside {
+    grid-area: aside;
+    background-color: green;
+}
+
+footer {
+    grid-area: footer;
+    background-color: violet;
+}
