@@ -3,6 +3,7 @@ body{
     padding: 0;
 }
 
+
 main{
     display: grid;
     grid-template-areas: 
@@ -14,6 +15,7 @@ main{
     grid-auto-rows: 20vh;
 }
 
+
 @media (min-width: 800px) {
     main {
         grid-template-areas: 
@@ -21,34 +23,89 @@ main{
         "nav article aside"
         "footer footer footer";
         grid-template-columns: 15% 70% 15%;
-        grid-template-rows: 15vh 100vh 15vh;
+        grid-template-rows: 15vh auto 10vh;
     }
 }
 
-#overskrift {
-    grid-area: header;
-    background-color: red;
+main2 {
+    display: grid;
     text-align: center;
-    padding-top: 25px;
+    margin-top: 20px;
+    margin-left: 25%;
+    grid-template-columns: 
+    "article1 article2 article3";
+    grid-template-columns: 150px 150px 150px;
+}
+
+#hoved-overskrift {
+    grid-area: header;
+    text-align: center;
+    padding-top: 80px;
+    font-size: 50px;
+    background-color: ddbea9;
+    margin-top: -20px;
+    margin-bottom: 0px;
+}
+
+.overskrift2 {
+    text-align: center;
+}
+.overskrift3 {
+    margin-left: 25px;
+}
+
+#beskrivelse {
+    margin: 75px;
 }
 
 nav {
     grid-area: nav;
-    background-color: blue;
+}
+
+#myUL {
+    margin-top: 75px;
+    line-height: 30px;
+    list-style-type: none;
+}
+
+.myOL {
+    margin: 30px;
 }
 
 article {
     grid-area: article;
-    background-color: yellow;
+    background-color: ffe8d6;
 
+}
+
+.liste {
+    margin-left: 70px;
 }
 
 aside {
     grid-area: aside;
-    background-color: green;
 }
 
 footer {
     grid-area: footer;
     background-color: violet;
+}
+
+#billede {
+    display: block;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75%;
+
+    border-radius: 50px;
+}
+
+#billede-tekst1 {
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+#billede-tekst2 {
+    margin-left: 46%;
 }
