@@ -30,46 +30,62 @@ main{
 main2 {
     display: grid;
     text-align: center;
-    margin-top: 20px;
-    margin-left: 25%;
     grid-template-columns: 
     "article1 article2 article3";
     grid-template-columns: 150px 150px 150px;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+    justify-content: center;
+    font-size: 20px;
+    font-family: 'Acme', sans-serif;
+}
+@media (min-width: 800px) {
+    main2 {
+    grid-template-areas:
+    "article1 article2 article3";
+    grid-template-columns: 150px 150px 150px ;
+    align-content: center;
+    }
 }
 
 #hoved-overskrift {
     grid-area: header;
     text-align: center;
-    padding-top: 80px;
+    padding-top: 35px;
     font-size: 50px;
     background-color: ddbea9;
     margin-top: -20px;
     margin-bottom: 0px;
+    font-family: 'Permanent Marker', cursive;
+    letter-spacing: 0.1em;
+
 }
 
 .overskrift2 {
     text-align: center;
-}
-.overskrift3 {
-    margin-left: 25px;
+    font-family: 'Acme', sans-serif;
+    font-size: 40px;
+    letter-spacing: 0.1em;
 }
 
 #beskrivelse {
-    margin: 75px;
+    margin-top: 2em;
+    margin-left: 20vh;
+    margin-right: 20vh;
+    font-family: 'Acme', sans-serif;
+    font-size: 24px;
+    line-height: 1.5em;
 }
 
 nav {
     grid-area: nav;
 }
 
-#myUL {
-    margin-top: 75px;
-    line-height: 30px;
-    list-style-type: none;
-}
-
 .myOL {
-    margin: 30px;
+    margin-left: 15em;
+    margin-right: 15em;
+    font-family: 'Acme', sans-serif;
+    line-height: 2em;
 }
 
 article {
@@ -79,7 +95,10 @@ article {
 }
 
 .liste {
-    margin-left: 70px;
+    margin-left: 15em;
+    margin-right: 10em;
+    font-family: 'Acme', sans-serif;
+    line-height: 2em;
 }
 
 aside {
@@ -88,7 +107,8 @@ aside {
 
 footer {
     grid-area: footer;
-    background-color: violet;
+    background-color: ddbea9;
+    text-align: center;
 }
 
 #billede {
@@ -97,15 +117,17 @@ footer {
     margin-left: auto;
     margin-right: auto;
     max-width: 75%;
-
     border-radius: 50px;
 }
 
 #billede-tekst1 {
     text-align: center;
-    margin-bottom: 2px;
+    justify-content: center;
+    font-family: 'acme', sans-serif;
 }
 
 #billede-tekst2 {
-    margin-left: 46%;
+    margin-left: 48%;
+    margin-right: 52%;
+    
 }
